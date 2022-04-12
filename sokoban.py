@@ -2,17 +2,17 @@ class Sokoban:
   """
   Definimos los componentes
 
-  0 - Cajas
-  1 - Paredes
-  2 - Muñeco
-  3 - Camino
+  2 - Cajas
+  3 - Paredes
+  0 - Muñeco
+  1 - Camino
   4 - Metas
   5 - Muñeco_meta
   6 - Caja_meta
 
   Reglas validas para moverse (Arriba, Derecha, Abajo, Izquierda)
 
-  00 - Muñeco, camino -> [2,3] -> [3,2]
+  00 - Muñeco, camino -> [0,1] -> [1,0]
   01 - Muñeco, camino
   02 - Muñeco, caja, camino
   03 - Muñeco, caja, meta
@@ -88,4 +88,29 @@ class Sokoban:
 
 juego = Sokoban()
 juego.jugar()
-                                                                            
+
+#00 - Personaje, espacio -> [0,1] -> [1,0]
+if self.mapa[self.muneco_fila][self.muneco_columna] == 0 and self.mapa[self.muneco_fila][self.muneco_columna + 1] == 1:
+            self.mapa[self.muneco_fila][self.muneco_columna] = 1
+            self.mapa[self.muneco_fila][self.muneco_columna + 1] = 0
+            self.muneco_columna += 1
+      
+    #01 - Personaje, meta -> [0,4] -> [1,5]        
+elif self.mapa[self.muneco_fila][self.muneco_columna] == 0 and self.mapa[self.muneco_fila][self.muneco_columna + 1] == 4:
+            self.mapa[self.muneco_fila][self.muneco_columna] = 1
+            self.mapa[self.muneco_fila][self.muneco_columna + 1] = 5
+            self.muneco_columna += 1
+
+      #04 - Muñeco, caja, espacio [0, 2, 1] -> [1, 0, 2]
+elif self.mapa[self.muneco_fila][self.muneco_columna] == 0 and self.mapa[self.muneco_fila][self.muneco_columna +1] == 2 and self.mapa[self.muneco_fila][self.muneco_columna +2] == 1:
+         self.mapa[self.muneco_fila][self.muneco_columna] = 1
+         self.mapa[self.muneco_fila][self.muneco_columna +1] = 0
+         self.mapa[self.muneco_fila][self.muneco_columna +2] = 2
+         self.muneco_columna += 1
+
+       
+
+
+   
+
+
