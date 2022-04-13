@@ -103,12 +103,21 @@ elif self.mapa[self.muneco_fila][self.muneco_columna] == 0 and self.mapa[self.mu
 
       #04 - Muñeco, caja, espacio [0, 2, 1] -> [1, 0, 2]
 elif self.mapa[self.muneco_fila][self.muneco_columna] == 0 and self.mapa[self.muneco_fila][self.muneco_columna +1] == 2 and self.mapa[self.muneco_fila][self.muneco_columna +2] == 1:
-         self.mapa[self.muneco_fila][self.muneco_columna] = 1
-         self.mapa[self.muneco_fila][self.muneco_columna +1] = 0
-         self.mapa[self.muneco_fila][self.muneco_columna +2] = 2
-         self.muneco_columna += 1
+           self.mapa[self.muneco_fila][self.muneco_columna] = 1
+           self.mapa[self.muneco_fila][self.muneco_columna +1] = 0
+           self.mapa[self.muneco_fila][self.muneco_columna +2] = 2
+           self.muneco_columna += 1 
 
-       
+      #05 - Muñeco, caja, meta [0,2,4] -> [4,0,2]
+elif self.mapa[self.muneco_fila][self.muneco_columna] ==0 and self.mapa[self.muneco_fila][self.muneco_columna +1] == 2 and self.mapa[self.muneco_fila][self.muneco_columna +2] == 4:
+            self.mapa[self.muneco_fila][self.muneco_columna]= 1
+            self.mapa[self.muneco_fila][self.muneco_columna +1] = 0
+            self.mapa[self.muneco_fila][self.muneco_columna +2] = 2
+            self.muneco_columna += 1 
+  
+
+
+
 
 
    
