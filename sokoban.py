@@ -203,4 +203,6 @@ class Sokoban:
      self.mapa[self.muneco_fila][self.muneco_columna - 2] = 6
      self.muneco_columna -= 1
 
-      
+    #Terminamos con los movimientos hacia la derecha y ahora comenzaremos con los movimientos hacia abajo.  
+  def moverAbajo(self):
+    
