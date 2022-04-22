@@ -205,4 +205,11 @@ class Sokoban:
 
     #Terminamos con los movimientos hacia la derecha y ahora comenzaremos con los movimientos hacia abajo.  
   def moverAbajo(self):
-    
+     #00 - Muñeco, camino -> [1,0] -> [0,1]
+    if self.mapa[self.muneco_fila][self.muneco_columna] == 0 and self.mapa[self.muneco_fila +1][self.muneco_columna] == 1:
+     self.mapa[self.muneco_fila][self.muneco_columna] = 1
+     self.mapa[self.muneco_fila +1][self.muneco_columna] = 0
+     self.muneco_fila += 1
+
+      
+      
