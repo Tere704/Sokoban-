@@ -141,6 +141,13 @@ class Sokoban:
      self.mapa[self.muneco_fila][self.muneco_columna - 1] = 0 
      self.muneco_columna -= 1 
 
-      
+     #02 - Muñeco, caja, camino  
+    elif self.mapa[self.muneco_fila][self.muneco_columna] == 0 and self.mapa[self.muneco_fila][self.muneco_columna - 1] == 2:
+     self.mapa[self.muneco_fila][self.muneco_columna] = 1
+     self.mapa[self.muneco_fila][self.muneco_columna - 1] = 0
+     self.mapa[self.muneco_fila][self.muneco_columna - 2] = 2
+     self.muneco_columna -= 1 
+
+    
 
     
